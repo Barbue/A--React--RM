@@ -9,22 +9,22 @@
     margin-right: auto;
     margin-left: auto;
     gap: 25px;
-  }
+}
   
   p {  
     text-align: center;
-    }
+}
 
   h {
    font-size: 40px ;
-  }
+}
 
   h1 {
     font-size: 50px;
     text-align: center;
     font-style: italic;
     text-decoration: underline;
-  }
+}
    
    
 
@@ -101,3 +101,4 @@ h4 {
 body{
   background-color: lightgreen
 }
+

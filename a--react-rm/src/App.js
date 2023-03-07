@@ -4,18 +4,16 @@ import axios from 'axios'
 import { useEffect, useState } from 'react';
 import Header from './Header'
 
-
   
- 
 function App() {
 
 const [characters, setCharacters] = useState([]);
 
 useEffect(() => {
-	const fetchData = async () => {
+const fetchData = async () => {
    try {
 
-	const {data} = await axios.get('https://rickandmortyapi.com/api/character/')
+	const {data} = await axios.get('https://rickandmortyapi.com/api/character')
 
 	setCharacters(data.results)
 } catch (error) {
@@ -30,19 +28,20 @@ fetchData()
 return (
  <div className="App">
 <Header />
+
 <div className="results"> 
 	
 {characters.map(character => (
-    <div class="flip-card">
-    <div class="flip-card-inner">
-    <div class="flip-card-front">
+    <div className="flip-card">
+    <div className="flip-card-inner">
+    <div className="flip-card-front">
       <img src={character.image} alt={character.name}/>
 	  <h2>{character.name}</h2>
       <h4>{`Gender: ${character.gender}`}</h4>
 	  <h4>{`Species: ${character.species}`}</h4>
       <h4>{`Status: ${character.status}`}</h4>
     </div>
-    <div class="flip-card-back">
+    <div className="flip-card-back">
 	<p>{`Episodes: ${character.episode.length}`}</p>
 	   <br></br>
     <p>{`Location: ${character.location.name}`}</p>
@@ -50,7 +49,7 @@ return (
     <p>{`Origin: ${character.origin.name}`}</p>
       
     </div>
-  </div>
+    </div>
 
   
 </div>
@@ -58,7 +57,7 @@ return (
 </div>
 </div>
 );
-}
+};
 
 
 
@@ -80,7 +79,7 @@ export default App;
 
 
 
-{/* <div className="results">
+/* <div className="results">
       
 
 	  {characters.map(character => (
@@ -100,4 +99,6 @@ export default App;
 		</p>
     </div>
 ))}
-</div> */}
+</div> */
+
+
